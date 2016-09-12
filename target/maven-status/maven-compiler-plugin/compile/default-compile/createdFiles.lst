@@ -1,0 +1,14 @@
+ie\walsh\springapps\wiring\javaconfig\MediaPlayer.class
+ie\walsh\springapps\wiring\autoconfig\CompactDisc.class
+ie\walsh\springapps\messageservice\MessageService.class
+ie\walsh\springapps\wiring\autoconfig\MediaPlayer.class
+ie\walsh\springapps\wiring\autoconfig\CDPlayer.class
+ie\walsh\springapps\wiring\javaconfig\CDPlayerConfig.class
+ie\walsh\springapps\wiring\javaconfig\CompactDisc.class
+ie\walsh\springapps\wiring\javaconfig\XXBandCD.class
+ie\walsh\springapps\wiring\autoconfig\CDPlayerConfig.class
+ie\walsh\springapps\messageservice\Application.class
+ie\walsh\springapps\wiring\autoconfig\XXBandCD.class
+ie\walsh\springapps\messageservice\Application$1.class
+ie\walsh\springapps\wiring\javaconfig\CDPlayer.class
+ie\walsh\springapps\messageservice\MessagePrinter.class
