@@ -1,4 +1,4 @@
-package ie.walsh.springapps.wiring.autoconfig;
+package ie.walsh.springapps.wiring.autoconfig.example_1;
 
 import org.springframework.stereotype.Component;
 
