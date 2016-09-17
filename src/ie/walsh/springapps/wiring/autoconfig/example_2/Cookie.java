@@ -1,7 +1,6 @@
 package ie.walsh.springapps.wiring.autoconfig.example_2;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-@Primary
 @Qualifier("cookie")
 public class Cookie implements Dessert {
 	
