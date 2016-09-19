@@ -1,4 +1,4 @@
-package ie.walsh.springapps.wiring.autoconfig.example_2;
+package ie.walsh.springapps.wiring.javaconfig.example_2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
