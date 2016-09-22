@@ -1,3 +1,4 @@
+ie\walsh\springapps\aspects\example_1\Runner.class
 ie\walsh\springapps\wiring\autoconfig\example_2\PersonConfig.class
 ie\walsh\springapps\wiring\autoconfig\example_1\CDPlayer.class
 ie\walsh\springapps\wiring\javaconfig\example_2\PersonConfig.class
@@ -15,7 +16,9 @@ ie\walsh\springapps\messageservice\MessagePrinter.class
 ie\walsh\springapps\wiring\javaconfig\example_2\Person.class
 ie\walsh\springapps\wiring\javaconfig\example_1\CompactDisc.class
 ie\walsh\springapps\wiring\autoconfig\example_2\Consumer.class
+ie\walsh\springapps\aspects\example_1\Performance.class
 ie\walsh\springapps\wiring\javaconfig\example_2\Runner.class
+ie\walsh\springapps\aspects\example_1\Audience.class
 ie\walsh\springapps\messageservice\MessageService.class
 ie\walsh\springapps\wiring\javaconfig\example_1\CDPlayerConfig.class
 ie\walsh\springapps\wiring\javaconfig\example_2\Consumer.class

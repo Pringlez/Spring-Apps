@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ie.walsh.springapps</groupId>
   <artifactId>spring-examples</artifactId>
-  <version>0.0.6-SNAPSHOT</version>
+  <version>0.0.7-SNAPSHOT</version>
   <name>Spring Examples</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -11,6 +11,11 @@
         <artifactId>spring-context</artifactId>
         <version>4.3.2.RELEASE</version>
     </dependency>
+	<dependency>
+    	<groupId>org.aspectj</groupId>
+    	<artifactId>aspectjrt</artifactId>
+    	<version>1.7.3</version>
+	</dependency>
 </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
