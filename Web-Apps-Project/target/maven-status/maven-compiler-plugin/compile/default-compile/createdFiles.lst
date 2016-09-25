@@ -1,5 +1,9 @@
-ie\walsh\springwebapps\config\AppExampleConfig.class
-ie\walsh\springwebapps\test\HomeControllerTest.class
-ie\walsh\springwebapps\config\RootConfig.class
+ie\walsh\springwebapps\test\ControllerTest.class
 ie\walsh\springwebapps\config\WebConfig.class
 ie\walsh\springwebapps\app\HomeController.class
+ie\walsh\springwebapps\app\ExampleController.class
+ie\walsh\springwebapps\data\ExampleData.class
+ie\walsh\springwebapps\interfaces\DataRepository.class
+ie\walsh\springwebapps\config\AppExampleConfig.class
+ie\walsh\springwebapps\config\RootConfig.class
+ie\walsh\springwebapps\data\DataForm.class
