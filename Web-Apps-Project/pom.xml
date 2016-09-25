@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ie.walsh.springwebapps</groupId>
   <artifactId>spring-examples</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>Spring Examples</name>
   <url>http://maven.apache.org</url>
@@ -10,12 +10,17 @@
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>4.3.2.RELEASE</version>
+        <version>4.3.3.RELEASE</version>
     </dependency>
     <dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-webmvc</artifactId>
-	    <version>4.3.2.RELEASE</version>
+	    <version>4.3.3.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-test</artifactId>
+	    <version>4.3.3.RELEASE</version>
 	</dependency>
 	<dependency>
         <groupId>javax.servlet</groupId>
@@ -23,6 +28,11 @@
         <version>3.1.0</version>
         <scope>provided</scope>
     </dependency>
+    <dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.12</version>
+	</dependency>
   </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>

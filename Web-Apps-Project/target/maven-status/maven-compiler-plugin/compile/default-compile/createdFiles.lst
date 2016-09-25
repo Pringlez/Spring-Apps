@@ -1,3 +1,5 @@
-ie\walsh\webapps\config\RootConfig.class
-ie\walsh\webapps\config\WebConfig.class
-ie\walsh\webapps\config\AppExampleConfig.class
+ie\walsh\springwebapps\config\AppExampleConfig.class
+ie\walsh\springwebapps\test\HomeControllerTest.class
+ie\walsh\springwebapps\config\RootConfig.class
+ie\walsh\springwebapps\config\WebConfig.class
+ie\walsh\springwebapps\app\HomeController.class
