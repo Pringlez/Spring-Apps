@@ -7,3 +7,4 @@ ie\walsh\springwebapps\interfaces\DataRepository.class
 ie\walsh\springwebapps\config\AppExampleConfig.class
 ie\walsh\springwebapps\config\RootConfig.class
 ie\walsh\springwebapps\data\DataForm.class
+ie\walsh\springwebapps\test\ExampleControllerTest.class
