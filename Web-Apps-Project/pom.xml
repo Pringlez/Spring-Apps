@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ie.walsh.springwebapps</groupId>
   <artifactId>spring-examples</artifactId>
-  <version>0.0.6-SNAPSHOT</version>
+  <version>0.0.7-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>Spring Examples</name>
   <url>http://maven.apache.org</url>

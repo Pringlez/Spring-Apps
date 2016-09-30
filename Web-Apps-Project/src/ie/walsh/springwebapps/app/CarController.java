@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import ie.walsh.springwebapps.data.RequestForm;
 import ie.walsh.springwebapps.data.Car;
+import ie.walsh.springwebapps.data.CarForm;
 import ie.walsh.springwebapps.interfaces.CarRepository;
 
 @Controller
@@ -43,7 +43,7 @@ public class CarController {
 	}
 
 	@RequestMapping(method=RequestMethod.POST)
-	public String saveCar(RequestForm form, Model model) throws Exception {
+	public String saveCar(CarForm form, Model model) throws Exception {
 		dataRepository.saveCar(new Car(null, form.getMake(), form.getModel(), new Date()));
 		return "redirect:/cars";
 	}

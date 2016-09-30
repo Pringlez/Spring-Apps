@@ -1,6 +1,7 @@
 ie\walsh\springwebapps\db\JDBCUserLink$UserRowMapper.class
 ie\walsh\springwebapps\db\JDBCCarLink$1.class
 ie\walsh\springwebapps\config\WebConfig.class
+ie\walsh\springwebapps\app\UserController.class
 ie\walsh\springwebapps\config\RootConfig$WebPackage.class
 ie\walsh\springwebapps\test\HomeControllerTest.class
 ie\walsh\springwebapps\config\RootConfig.class
@@ -10,9 +11,10 @@ ie\walsh\springwebapps\interfaces\UserRepository.class
 ie\walsh\springwebapps\db\JDBCUserLink.class
 ie\walsh\springwebapps\db\JDBCUserLink$1.class
 ie\walsh\springwebapps\app\HomeController.class
+ie\walsh\springwebapps\data\CarForm.class
 ie\walsh\springwebapps\data\User.class
+ie\walsh\springwebapps\data\RegisterForm.class
 ie\walsh\springwebapps\config\AppExampleConfig.class
-ie\walsh\springwebapps\data\RequestForm.class
 ie\walsh\springwebapps\app\CarController.class
 ie\walsh\springwebapps\data\Car.class
 ie\walsh\springwebapps\interfaces\CarRepository.class
