@@ -20,11 +20,11 @@
 			<h1>Recent Cars</h1>
 			<ul class="carList">
 				<c:forEach items="${carList}" var="car" >
-					<li id="car_<span>car.id">
-						<div class="carMake"><span>${car.make}</span></div>
-						<div class="carModel"><span>${car.model}</span></div>
+					<li id="car_<c:out value="car.id"/>">
+						<div class="carMake"><c:out value="${car.make}"/></div>
+						<div class="carModel"><c:out value="${car.model}"/></div>
 						<div>
-							<span class="carTime"><span>${car.time}</span></span>
+							<span class="carTime"><c:out value="${car.time}"/></span>
 						</div>
 					</li>
 				</c:forEach>

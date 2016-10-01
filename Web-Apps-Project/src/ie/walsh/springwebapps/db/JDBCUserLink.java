@@ -12,12 +12,12 @@ import ie.walsh.springwebapps.data.User;
 import ie.walsh.springwebapps.interfaces.UserRepository;
 
 @Repository
-public class JDBCUserLink implements UserRepository {
+public class JdbcUserLink implements UserRepository {
 
 	private JdbcOperations jdbc;
 	
 	@Autowired
-	public JDBCUserLink(JdbcOperations jdbc) {
+	public JdbcUserLink(JdbcOperations jdbc) {
 		this.jdbc = jdbc;
 	}
 	

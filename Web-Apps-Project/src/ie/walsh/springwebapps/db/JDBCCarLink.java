@@ -13,12 +13,12 @@ import ie.walsh.springwebapps.data.Car;
 import ie.walsh.springwebapps.interfaces.CarRepository;
 
 @Repository
-public class JDBCCarLink implements CarRepository {
+public class JdbcCarLink implements CarRepository {
 
 	private JdbcOperations jdbc;
 
 	@Autowired
-	public JDBCCarLink(JdbcOperations jdbc) {
+	public JdbcCarLink(JdbcOperations jdbc) {
 		this.jdbc = jdbc;
 	}
 

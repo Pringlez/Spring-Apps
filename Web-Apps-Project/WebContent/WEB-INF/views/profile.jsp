@@ -9,8 +9,8 @@
 	</head>
 	<body>
 		<h1>Your Profile</h1>
-		<span>${profile.username}</span><br/>
-		<span>${profile.firstName}</span> <span>${profile.lastName}</span><br/>
-		<span>${profile.email}</span>
+		<c:out value="${profile.username}" /><br/>
+    	<c:out value="${profile.firstName}" /> <c:out value="${profile.lastName}" /><br/>
+    	<c:out value="${profile.email}" />
 	</body>
 </html>
