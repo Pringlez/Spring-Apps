@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ie.walsh.springwebapps</groupId>
   <artifactId>spring-examples</artifactId>
-  <version>0.0.8-SNAPSHOT</version>
+  <version>0.0.9-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>Spring Examples</name>
   <url>http://maven.apache.org</url>
@@ -57,6 +57,11 @@
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-validator</artifactId>
 	    <version>5.3.0.CR1</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.h2database</groupId>
+	    <artifactId>h2</artifactId>
+	    <version>1.4.192</version>
 	</dependency>
     <dependency>
 	    <groupId>junit</groupId>
