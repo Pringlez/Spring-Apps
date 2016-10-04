@@ -23,13 +23,14 @@ public class JdbcUserLink implements UserRepository {
 	
 	public User saveUser(User User) {
 		jdbc.update(
-		"insert into Users (username, password, first_name, last_name, email)" +
-		" values (?, ?, ?, ?, ?)",
-		User.getUsername(),
-		User.getPassword(),
-		User.getFirstName(),
-		User.getLastName(),
-		User.getEmail());
+			"insert into Users (username, password, first_name, last_name, email)" +
+			" values (?, ?, ?, ?, ?)",
+			User.getUsername(),
+			User.getPassword(),
+			User.getFirstName(),
+			User.getLastName(),
+			User.getEmail()
+		);
 		return User;
 	}
 	

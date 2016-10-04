@@ -21,30 +21,30 @@ public class CarController {
 
 	private static final String MAX_LONG_AS_STRING = "9223372036854775807";
 	
-	private CarRepository dataRepository;
+	private CarRepository carRepository;
 	
 	@Autowired
-	public CarController (CarRepository dataRepository) {
-		this.dataRepository = dataRepository;
+	public CarController (CarRepository carRepository) {
+		this.carRepository = carRepository;
 	}
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public List<Car> cars (
 		@RequestParam(value="max", defaultValue=MAX_LONG_AS_STRING) long max,
 		@RequestParam(value="count", defaultValue="20") int count) {
-		return dataRepository.findCars(max, count);
+		return carRepository.findCars(max, count);
 	}
 
 	@RequestMapping(value="/{carId}", method=RequestMethod.GET)
 	public String car (
 		@PathVariable("carId") long carId, Model model) {
-		model.addAttribute(dataRepository.findCarById(carId));
+		model.addAttribute(carRepository.findCarById(carId));
 		return "car";
 	}
 
 	@RequestMapping(method=RequestMethod.POST)
 	public String saveCar(CarForm form, Model model) throws Exception {
-		dataRepository.saveCar(new Car(null, form.getMake(), form.getModel(), new Date()));
+		carRepository.saveCar(new Car(null, form.getMake(), form.getModel(), new Date()));
 		return "redirect:/cars";
 	}
 }
