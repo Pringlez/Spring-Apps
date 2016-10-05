@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<title>Home</title>
-		<link rel="stylesheet" type="text/css" href="<c:url value="/resources/style.css" />" />
+		<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 	</head>
 	<body>
 		<h1>Welcome to Test App</h1>
