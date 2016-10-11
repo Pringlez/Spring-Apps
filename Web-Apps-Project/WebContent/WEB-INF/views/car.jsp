@@ -5,9 +5,8 @@
 <html>
 	<head>
 		<title>Car</title>
-		<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="<c:url value="/resources/css/style.css" />">
+		<link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap.min.css" />">
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -23,9 +22,9 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 				  <ul class="nav navbar-nav">
-				    <li class="active"><a href="#">Home</a></li>
-				    <li><a href="#about">About</a></li>
-				    <li><a href="#contact">Contact</a></li>
+				    <li class="active"><a href="<c:url value="/" />">Home</a></li>
+				    <li><a href="<c:url value="/cars" />">Cars</a></li>
+					<li><a href="<c:url value="/user/register" />">Register</a></li>
 				    <li class="dropdown">
 				      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 				      <ul class="dropdown-menu">
@@ -47,5 +46,6 @@
 			<div class="carModel"><c:out value="${car.model}"/></div>
 			<div><span class="carTime"><c:out value="${car.time}"/></span></div>
 		</div>
+		<script src="<c:url value="/resources/bootstrap/js/bootstrap.min.js" />"></script>
 	</body>
 </html>
