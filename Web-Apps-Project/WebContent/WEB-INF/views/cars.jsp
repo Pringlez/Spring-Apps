@@ -13,12 +13,12 @@
 			<div class="container">
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				    <span class="sr-only">Toggle navigation</span>
+				    <span class="sr-only">Toggle</span>
 				    <span class="icon-bar"></span>
 				    <span class="icon-bar"></span>
 				    <span class="icon-bar"></span>
 				  </button>
-				  <a class="navbar-brand" href="#">Bootstrap theme</a>
+				  <a class="navbar-brand" href="/">Spring Web App</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 				  <ul class="nav navbar-nav">
@@ -28,41 +28,58 @@
 				    <li class="dropdown">
 				      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 				      <ul class="dropdown-menu">
-				        <li><a href="#">Action</a></li>
-				        <li><a href="#">Another action</a></li>
-				        <li><a href="#">Something else here</a></li>
+				        <li><a href="https://projects.spring.io/spring-framework/">Spring Framework</a></li>
+				        <li><a href="https://spring.io/">Spring IO</a></li>
+				        <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
 				        <li role="separator" class="divider"></li>
-				        <li class="dropdown-header">Nav header</li>
-				        <li><a href="#">Separated link</a></li>
-				        <li><a href="#">One more separated link</a></li>
+				        <li class="dropdown-header">Header</li>
+				        <li><a href="http://www.w3schools.com/">W3Schools</a></li>
+				        <li><a href="https://github.com/Pringlez/Spring-Apps">Spring Apps</a></li>
 				      </ul>
 				    </li>
 				  </ul>
 				</div>
 			</div>
 	    </nav>
-		<div class="carForm">
-			<h1>Enter Car Details</h1>
+	    <h1 class="pageHeader">Cars Page</h1>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae massa vel magna dictum hendrerit sit amet eu dui. 
+	    Nullam dapibus mollis mi a sodales. Sed tempor tincidunt ex sit amet bibendum. Ut ut cursus dolor, vitae vehicula lectus. 
+	    Integer ut elit felis. Phasellus finibus libero tellus, ac blandit sapien convallis sit amet. In sed ante leo. 
+	    Nam mattis pretium augue, eget vulputate ipsum pretium nec. Pellentesque nec luctus metus.</p>
+	    <h2 class="formHeader">Car Form</h2>
+		<div class="carForm carFormPadding">
 			<form method="POST" name="carForm">
-				<textarea name="make" cols="80" rows="5"></textarea><br/>
-				<textarea name="model" cols="80" rows="5"></textarea><br/>
-				<input type="submit" value="Add" />
+				<div class="form-group">
+					<label>Make</label>
+	    			<input name="make" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Model</label>
+	    			<input name="model" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
 		</div>
-		<div class="listTitle">
-			<h1>Recent Cars</h1>
-			<ul class="carList">
-				<c:forEach items="${carList}" var="car" >
-					<li id="car_<c:out value="car.id"/>">
-						<div class="carMake"><c:out value="${car.make}"/></div>
-						<div class="carModel"><c:out value="${car.model}"/></div>
-						<div>
-							<span class="carTime"><c:out value="${car.time}"/></span>
-						</div>
-					</li>
-				</c:forEach>
-			</ul>
-		</div>
+		<br/>
+	    <h2>Recent Cars</h2>
+	    <table class="table table-striped">
+	        <thead>
+	            <tr>
+	                <th>Make</th>
+	                <th>Model</th>
+	                <th>Time</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	        	<c:forEach items="${carList}" var="car" >
+	        		<tr>
+		                <td><c:out value="${car.make}"/></td>
+		                <td><c:out value="${car.model}"/></td>
+		                <td><c:out value="${car.time}"/></td>
+	            	</tr>
+	        	</c:forEach>
+	        </tbody>
+	    </table>
 		<script src="<c:url value="/resources/bootstrap/js/bootstrap.min.js" />"></script>
 	</body>
 </html>

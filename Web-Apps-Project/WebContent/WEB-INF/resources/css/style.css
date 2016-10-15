@@ -1,5 +1,19 @@
 body {
 	font-family: sans-serif;
+	padding: 30px;
+}
+
+.pageHeader {
+	padding-top: 22px;
+}
+
+p {
+	font-size: 16px;
+}
+
+.formHeader {
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .carList h1 {
@@ -40,4 +54,8 @@ body {
 
 .carForm h1 {
 	font-size: 16pt;
+}
+
+.carFormPadding {
+	padding-top: 2px;
 }
