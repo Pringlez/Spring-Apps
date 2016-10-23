@@ -16,6 +16,7 @@ public class DatabaseConfig {
 		BasicDataSource ds = new BasicDataSource();
 		ds.setDriverClassName("com.mysql.jdbc.Driver");
 		ds.setUrl("jdbc:mysql://192.168.1.116/spring_webapps");
+		ds.setInitialSize(10);
 		ds.setUsername("user");
 		ds.setPassword("testing");
 		return ds;

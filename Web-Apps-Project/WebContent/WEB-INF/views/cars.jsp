@@ -26,7 +26,7 @@
 				    <li><a href="<c:url value="/cars" />">Cars</a></li>
 					<li><a href="<c:url value="/user/register" />">Register</a></li>
 				    <li class="dropdown">
-				      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				      <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 				      <ul class="dropdown-menu">
 				        <li><a href="https://projects.spring.io/spring-framework/">Spring Framework</a></li>
 				        <li><a href="https://spring.io/">Spring IO</a></li>
@@ -41,38 +41,25 @@
 				</div>
 			</div>
 	    </nav>
-	    <h1 class="pageHeader">Cars Page</h1>
+	    <h1 class="pageHeader">Cars</h1>
 	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae massa vel magna dictum hendrerit sit amet eu dui. 
 	    Nullam dapibus mollis mi a sodales. Sed tempor tincidunt ex sit amet bibendum. Ut ut cursus dolor, vitae vehicula lectus. 
 	    Integer ut elit felis. Phasellus finibus libero tellus, ac blandit sapien convallis sit amet. In sed ante leo. 
 	    Nam mattis pretium augue, eget vulputate ipsum pretium nec. Pellentesque nec luctus metus.</p>
-	    <h2 class="formHeader">Car Form</h2>
-		<div class="carForm carFormPadding">
-			<form method="POST" name="carForm">
-				<div class="form-group">
-					<label>Make</label>
-	    			<input name="make" class="form-control">
-				</div>
-				<div class="form-group">
-					<label>Model</label>
-	    			<input name="model" class="form-control">
-				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
-		</div>
-		<br/>
-	    <h2>Recent Cars</h2>
+	    <h2>Cars of List</h2>
 	    <table class="table table-striped">
 	        <thead>
 	            <tr>
+	            	<th>ID</th>
 	                <th>Make</th>
 	                <th>Model</th>
 	                <th>Time</th>
 	            </tr>
 	        </thead>
 	        <tbody>
-	        	<c:forEach items="${carList}" var="car" >
+	        	<c:forEach items="${carList}" var="car">
 	        		<tr>
+	        			<td><a href="/cars/${car.id}"><c:out value="${car.id}"/></a></td>
 		                <td><c:out value="${car.make}"/></td>
 		                <td><c:out value="${car.model}"/></td>
 		                <td><c:out value="${car.time}"/></td>
