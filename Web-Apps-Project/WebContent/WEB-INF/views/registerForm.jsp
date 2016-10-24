@@ -48,7 +48,7 @@
 	    Integer ut elit felis. Phasellus finibus libero tellus, ac blandit sapien convallis sit amet. In sed ante leo. 
 	    Nam mattis pretium augue, eget vulputate ipsum pretium nec. Pellentesque nec luctus metus.</p>
 		<h2 class="formHeader">User Register Form</h2>
-		<div class="carForm carFormPadding">
+		<div class="form formPadding">
 			<form method="POST">
 				<div class="form-group">
 					<label>First Name</label>

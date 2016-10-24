@@ -46,10 +46,17 @@
 	    Nullam dapibus mollis mi a sodales. Sed tempor tincidunt ex sit amet bibendum. Ut ut cursus dolor, vitae vehicula lectus. 
 	    Integer ut elit felis. Phasellus finibus libero tellus, ac blandit sapien convallis sit amet. In sed ante leo. 
 	    Nam mattis pretium augue, eget vulputate ipsum pretium nec. Pellentesque nec luctus metus.</p>
-		<div class="carView">
-			<div class="carMake"><c:out value="${car.make}"/></div><br/>
-			<div class="carModel"><c:out value="${car.model}"/></div>
-			<div><span class="carTime"><c:out value="${car.time}"/></span></div>
+		<div>
+			<div class="carFormField"><c:out value="${car.make}"/></div><br/>
+			<div class="carFormField"><c:out value="${car.model}"/></div><br/>
+			<div class="carFormField"><c:out value="${car.color}"/></div><br/>
+			<div class="carFormField"><c:out value="${car.mileage}"/></div><br/>
+			<div class="carFormField"><c:out value="${car.year}"/></div><br/>
+			<div class="carFormField"><c:out value="${car.engineSize}"/></div><br/>
+			<div class="carFormField"><c:out value="${car.fuelType}"/></div><br/>
+			<div class="carFormField"><c:out value="${car.description}"/></div><br/>
+			<div class="carFormField"><c:out value="${car.price}"/></div>
+			<div><span class="carFormField"><c:out value="${car.time}"/></span></div>
 		</div>
 		<script src="<c:url value="/resources/bootstrap/js/bootstrap.min.js" />"></script>
 	</body>
