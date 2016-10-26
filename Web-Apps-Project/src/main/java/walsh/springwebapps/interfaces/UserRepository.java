@@ -1,5 +1,7 @@
 package main.java.walsh.springwebapps.interfaces;
 
+import java.util.List;
+
 import main.java.walsh.springwebapps.data.User;
 
 /**
@@ -8,6 +10,7 @@ import main.java.walsh.springwebapps.data.User;
  *
  */
 public interface UserRepository {
-	User saveUser(User spitter);	  
-	User findByUsername(String username);
+	public User saveUser(User user);
+	public User findByUsername(String username);
+	public List<User> findRecentUsers();
 }

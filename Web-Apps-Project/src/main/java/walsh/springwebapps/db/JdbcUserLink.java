@@ -2,6 +2,7 @@ package main.java.walsh.springwebapps.db;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
@@ -41,10 +42,18 @@ public class JdbcUserLink implements UserRepository {
 	
 	public User findByUsername(String username) {
 		return jdbc.queryForObject(
-			"select id, username, null, first_name, last_name, email from Users where username=?", 
+			"select id, username, null, first_name, last_name, email from Users where username=?",
 			new UserRowMapper(), 
 			username
 		);
+	}
+	
+	public List<User> findRecentUsers() {
+		return jdbc.query(
+			"select id, username, null, first_name, last_name, email" +
+			" from Users" +
+			" order by first_name desc limit 10", 
+		new UserRowMapper());
 	}
 	  
 	private static class UserRowMapper implements RowMapper<User> {
