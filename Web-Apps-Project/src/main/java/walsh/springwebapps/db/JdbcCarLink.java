@@ -35,13 +35,13 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper());
 	}
 
-	public List<Car> findCars(long max, int count) {
+	public List<Car> findCars(long maxValue, int limit) {
 		return jdbc.query(
 			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
 			" from Cars" +
 			" where id < ?" +
-			" order by created_at desc limit 20",
-		new CarRowMapper(), max);
+			" order by created_at desc limit ?",
+		new CarRowMapper(), maxValue, limit);
 	}
 
 	public Car findCarById(long id) {
@@ -50,6 +50,86 @@ public class JdbcCarLink implements CarRepository {
 			" from Cars" +
 			" where id = ?",
 		new CarRowMapper(), id);
+	}
+	
+	@Override
+	public List<Car> findCarsByMake(String make, int limit) {
+		return jdbc.query(
+			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
+			" from Cars" +
+			" where make = ?" +
+			" order by created_at desc limit ?",
+		new CarRowMapper(), make, limit);
+	}
+
+	@Override
+	public List<Car> findCarsByModel(String model, int limit) {
+		return jdbc.query(
+			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
+			" from Cars" +
+			" where model = ?" +
+			" order by created_at desc limit ?",
+		new CarRowMapper(), model);
+	}
+
+	@Override
+	public List<Car> findCarsByColor(String color, int limit) {
+		return jdbc.query(
+			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
+			" from Cars" +
+			" where color = ?" +
+			" order by created_at desc limit ?",
+		new CarRowMapper(), color);
+	}
+
+	@Override
+	public List<Car> findCarsByMileage(int minMileage, int maxMileage, int limit) {
+		return jdbc.query(
+			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
+			" from Cars" +
+			" where mileage >= ? and <= ?" +
+			" order by created_at desc limit ?",
+		new CarRowMapper(), minMileage, maxMileage, limit);
+	}
+
+	@Override
+	public List<Car> findCarsByYear(int minYear, int maxYear, int limit) {
+		return jdbc.query(
+			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
+			" from Cars" +
+			" where year >= ? and <= ?" +
+			" order by created_at desc limit ?",
+		new CarRowMapper(), minYear, maxYear, limit);
+	}
+
+	@Override
+	public List<Car> findCarsByEngineSize(int minEngSize, int maxEngSize, int limit) {
+		return jdbc.query(
+			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
+			" from Cars" +
+			" where engine_size >= ? and <= ?" +
+			" order by created_at desc limit ?",
+		new CarRowMapper(), minEngSize, maxEngSize, limit);
+	}
+
+	@Override
+	public List<Car> findCarsByFuelType(String fuelType, int limit) {
+		return jdbc.query(
+			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
+			" from Cars" +
+			" where fuel_type = ?" +
+			" order by created_at desc limit ?",
+		new CarRowMapper(), fuelType, limit);
+	}
+
+	@Override
+	public List<Car> findCarsByPrice(int minPrice, int maxPrice, int limit) {
+		return jdbc.query(
+			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
+			" from Cars" +
+			" where price >= ? and <= ?" +
+			" order by created_at desc limit ?",
+		new CarRowMapper(), minPrice, maxPrice, limit);
 	}
 
 	public void saveCar(Car car) {
@@ -68,7 +148,7 @@ public class JdbcCarLink implements CarRepository {
 			car.getTime()
 		);
 	}
-
+	
 	private static class CarRowMapper implements RowMapper<Car> {
 		public Car mapRow(ResultSet rs, int rowNum) throws SQLException {
 			return new Car(
