@@ -35,9 +35,9 @@ public class CarController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public List<Car> cars (
-		@RequestParam(value="max", defaultValue=MAX_LONG_AS_STRING) long max,
-		@RequestParam(value="count", defaultValue="20") int count) {
-		return carRepository.findCars(max, count);
+		@RequestParam(value="maxValue", defaultValue=MAX_LONG_AS_STRING) long maxValue,
+		@RequestParam(value="limit", defaultValue="20") int limit) {
+		return carRepository.findCars(maxValue, limit);
 	}
 
 	@RequestMapping(value="/{carId}", method=RequestMethod.GET)

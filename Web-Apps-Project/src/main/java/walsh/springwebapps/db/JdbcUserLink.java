@@ -27,6 +27,9 @@ public class JdbcUserLink implements UserRepository {
 		this.jdbc = jdbc;
 	}
 	
+	/**
+	 * Save user record using the JDBC interface
+	 */
 	public User saveUser(User User) {
 		jdbc.update(
 			"insert into Users (username, password, first_name, last_name, email)" +
@@ -40,6 +43,9 @@ public class JdbcUserLink implements UserRepository {
 		return User;
 	}
 	
+	/**
+	 * Find user record by the 'username' field using the JDBC interface
+	 */
 	public User findByUsername(String username) {
 		return jdbc.queryForObject(
 			"select id, username, null, first_name, last_name, email from Users where username=?",
@@ -48,6 +54,9 @@ public class JdbcUserLink implements UserRepository {
 		);
 	}
 	
+	/**
+	 * Find recent joined users using the JDBC interface
+	 */
 	public List<User> findRecentUsers() {
 		return jdbc.query(
 			"select id, username, null, first_name, last_name, email" +

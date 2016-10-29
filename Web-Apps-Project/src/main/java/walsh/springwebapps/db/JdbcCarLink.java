@@ -27,6 +27,9 @@ public class JdbcCarLink implements CarRepository {
 		this.jdbc = jdbc;
 	}
 
+	/**
+	 * Find recently added cars using the JDBC interface
+	 */
 	public List<Car> findRecentCars() {
 		return jdbc.query(
 			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
@@ -35,6 +38,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper());
 	}
 
+	/**
+	 * Find cars by id within a certain range and limit using the JDBC interface
+	 */
 	public List<Car> findCars(long maxValue, int limit) {
 		return jdbc.query(
 			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
@@ -44,6 +50,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), maxValue, limit);
 	}
 
+	/**
+	 * Find a car record by the 'id' field using the JDBC interface
+	 */
 	public Car findCarById(long id) {
 		return jdbc.queryForObject(
 			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
@@ -52,6 +61,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), id);
 	}
 	
+	/**
+	 * Find car records by the 'make' field using the JDBC interface
+	 */
 	@Override
 	public List<Car> findCarsByMake(String make, int limit) {
 		return jdbc.query(
@@ -62,6 +74,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), make, limit);
 	}
 
+	/**
+	 * Find car records by the 'model' field using the JDBC interface
+	 */
 	@Override
 	public List<Car> findCarsByModel(String model, int limit) {
 		return jdbc.query(
@@ -72,6 +87,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), model);
 	}
 
+	/**
+	 * Find car records by the 'color' field using the JDBC interface
+	 */
 	@Override
 	public List<Car> findCarsByColor(String color, int limit) {
 		return jdbc.query(
@@ -82,6 +100,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), color);
 	}
 
+	/**
+	 * Find car records by the 'mileage' field using the JDBC interface
+	 */
 	@Override
 	public List<Car> findCarsByMileage(int minMileage, int maxMileage, int limit) {
 		return jdbc.query(
@@ -92,6 +113,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), minMileage, maxMileage, limit);
 	}
 
+	/**
+	 * Find car records by the 'year' field using the JDBC interface
+	 */
 	@Override
 	public List<Car> findCarsByYear(int minYear, int maxYear, int limit) {
 		return jdbc.query(
@@ -102,6 +126,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), minYear, maxYear, limit);
 	}
 
+	/**
+	 * Find car records by the 'engine_size' field using the JDBC interface
+	 */
 	@Override
 	public List<Car> findCarsByEngineSize(int minEngSize, int maxEngSize, int limit) {
 		return jdbc.query(
@@ -112,6 +139,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), minEngSize, maxEngSize, limit);
 	}
 
+	/**
+	 * Find car records by the 'fuel_type' field using the JDBC interface
+	 */
 	@Override
 	public List<Car> findCarsByFuelType(String fuelType, int limit) {
 		return jdbc.query(
@@ -122,6 +152,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), fuelType, limit);
 	}
 
+	/**
+	 * Find car records by the 'price' field using the JDBC interface
+	 */
 	@Override
 	public List<Car> findCarsByPrice(int minPrice, int maxPrice, int limit) {
 		return jdbc.query(
@@ -132,6 +165,9 @@ public class JdbcCarLink implements CarRepository {
 		new CarRowMapper(), minPrice, maxPrice, limit);
 	}
 
+	/**
+	 * Save car record using the JDBC interface
+	 */
 	public void saveCar(Car car) {
 		jdbc.update(
 			"insert into Cars (make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at)" +
@@ -158,11 +194,13 @@ public class JdbcCarLink implements CarRepository {
 				rs.getString("color"),
 				rs.getInt("mileage"),
 				rs.getShort("year"),
-				rs.getInt("engineSize"),
-				rs.getString("fuelType"),
+				rs.getInt("engine_size"),
+				rs.getString("fuel_type"),
 				rs.getString("description"),
 				rs.getInt("price"),
-				rs.getDate("created_at")
+				null
+				// TODO - Fix the time stamp error
+				//rs.getDate("created_at")
 			);
 		}
 	}
