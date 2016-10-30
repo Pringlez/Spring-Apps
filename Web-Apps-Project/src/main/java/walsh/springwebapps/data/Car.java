@@ -12,7 +12,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 public class Car {
 
-	private final Long id;
+	private final int id;
 	private final String make;
 	private final String model;
 	private final String color;
@@ -25,11 +25,11 @@ public class Car {
 	private final Date time;
 	
 	public Car(String make, String model, Date time) {
-		this(null, make, model, time);
+		this(0, make, model, time);
 	}
 	
-	public Car(Long id, String make, String model, Date time) {
-		this.id = null;
+	public Car(int id, String make, String model, Date time) {
+		this.id = id;
 		this.make = make;
 		this.model = model;
 		this.color = null;
@@ -42,8 +42,8 @@ public class Car {
 		this.time = time;
 	}
 	
-	public Car(Long id, String make, String model, String color, int mileage, short year, int engineSize, String fuelType, String description, int price, Date time) {
-		this.id = null;
+	public Car(int id, String make, String model, String color, int mileage, short year, int engineSize, String fuelType, String description, int price, Date time) {
+		this.id = id;
 		this.make = make;
 		this.model = model;
 		this.color = color;
@@ -66,7 +66,7 @@ public class Car {
 		return HashCodeBuilder.reflectionHashCode(this, "id", "time");
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 

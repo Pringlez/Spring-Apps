@@ -49,7 +49,7 @@ public class CarController {
 
 	@RequestMapping(method=RequestMethod.POST)
 	public String saveCar(CarForm form, Model model) throws Exception {
-		carRepository.saveCar(new Car(null, form.getMake(), form.getModel(), form.getColor(), 
+		carRepository.saveCar(new Car(0, form.getMake(), form.getModel(), form.getColor(), 
 				form.getMileage(), form.getYear(), form.getEngineSize(), form.getFuelType(), form.getDescription(), form.getPrice(), new Date()));
 		return "redirect:/cars";
 	}

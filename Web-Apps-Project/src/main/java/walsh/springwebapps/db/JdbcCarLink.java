@@ -188,7 +188,7 @@ public class JdbcCarLink implements CarRepository {
 	private static class CarRowMapper implements RowMapper<Car> {
 		public Car mapRow(ResultSet rs, int rowNum) throws SQLException {
 			return new Car(
-				rs.getLong("id"),
+				rs.getInt("id"),
 				rs.getString("make"),
 				rs.getString("model"),
 				rs.getString("color"),
@@ -198,9 +198,7 @@ public class JdbcCarLink implements CarRepository {
 				rs.getString("fuel_type"),
 				rs.getString("description"),
 				rs.getInt("price"),
-				null
-				// TODO - Fix the time stamp error
-				//rs.getDate("created_at")
+				rs.getDate("created_at")
 			);
 		}
 	}
