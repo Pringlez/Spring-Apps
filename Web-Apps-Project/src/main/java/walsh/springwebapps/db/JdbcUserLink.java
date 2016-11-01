@@ -65,6 +65,11 @@ public class JdbcUserLink implements UserRepository {
 		new UserRowMapper());
 	}
 	  
+	/**
+	 * Maps rows from the database to an object and viceversa
+	 * @author John
+	 *
+	 */
 	private static class UserRowMapper implements RowMapper<User> {
 		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 			return new User(

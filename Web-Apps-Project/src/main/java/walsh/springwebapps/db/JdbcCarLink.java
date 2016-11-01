@@ -185,6 +185,11 @@ public class JdbcCarLink implements CarRepository {
 		);
 	}
 	
+	/**
+	 * Maps rows from the database to an object and viceversa
+	 * @author John
+	 *
+	 */
 	private static class CarRowMapper implements RowMapper<Car> {
 		public Car mapRow(ResultSet rs, int rowNum) throws SQLException {
 			return new Car(
