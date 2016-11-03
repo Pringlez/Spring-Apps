@@ -53,12 +53,13 @@ public class JdbcCarLink implements CarRepository {
 	/**
 	 * Find a car record by the 'id' field using the JDBC interface
 	 */
-	public Car findCarById(long id) {
-		return jdbc.queryForObject(
+	public Car findCarById(int id) {
+		List<Car> spittles = jdbc.query(
 			"select id, make, model, color, mileage, year, engine_size, fuel_type, description, price, created_at" +
 			" from Cars" +
 			" where id = ?",
 		new CarRowMapper(), id);
+		return spittles.size() > 0 ? spittles.get(0) : null;
 	}
 	
 	/**

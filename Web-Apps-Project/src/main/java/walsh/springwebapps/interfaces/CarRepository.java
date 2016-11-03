@@ -12,7 +12,7 @@ import main.java.walsh.springwebapps.data.Car;
 public interface CarRepository {
 	public List<Car> findRecentCars();
 	public List<Car> findCars(long maxValue, int limit);
-	public Car findCarById(long carId);
+	public Car findCarById(int carId);
 	public List<Car> findCarsByMake(String make, int limit);
 	public List<Car> findCarsByModel(String model, int limit);
 	public List<Car> findCarsByColor(String color, int limit);

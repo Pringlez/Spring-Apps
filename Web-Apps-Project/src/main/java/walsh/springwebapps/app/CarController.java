@@ -42,7 +42,7 @@ public class CarController {
 
 	@RequestMapping(value="/{carId}", method=RequestMethod.GET)
 	public String car (
-		@PathVariable("carId") long carId, Model model) {
+		@PathVariable("carId") int carId, Model model) {
 		model.addAttribute(carRepository.findCarById(carId));
 		return "car";
 	}

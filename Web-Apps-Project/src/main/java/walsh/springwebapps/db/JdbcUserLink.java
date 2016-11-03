@@ -49,9 +49,7 @@ public class JdbcUserLink implements UserRepository {
 	public User findByUsername(String username) {
 		return jdbc.queryForObject(
 			"select id, username, null, first_name, last_name, email from Users where username=?",
-			new UserRowMapper(), 
-			username
-		);
+		new UserRowMapper(), username);
 	}
 	
 	/**
